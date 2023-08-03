@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head-Counter</title>
+    <link rel="stylesheet" href="chat.css" media="screen" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <h1 class="per">PERSONS</h1>
+        <h1 class="perr" id="cnt">0</h1>
+        <button id="in" onclick="increase()">UPDATE</button>
+        <button id="s"onclick="save()">SAVE</button>
+        <p class="msg">PRIOR</p><p id="saved">0</p>
+    </div>
+    <script>
+        let incr= document.getElementById("cnt")
+        let add = document.getElementById("saved")
+        let count = 0
+        
+        function increase(){
+            count += 1
+            incr.innerText = count
+        }
+
+        function save() {
+            let num = count
+            if (num >= 1){
+                add.innerText = num 
+            }
+            incr.innerText = 0
+        }
+    </script>
+</body>
+</html>
